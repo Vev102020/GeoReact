@@ -8,7 +8,7 @@ import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
 function App() {
-  let [LinksOpen, setLinksOpen] = React.useState("false");
+  const [LinksOpen, setLinksOpen] = React.useState("false");
 
   const YmapCity = { YmapNameCity }.YmapNameCity;
   const AddCookie = () => {

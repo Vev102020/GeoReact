@@ -44,13 +44,13 @@ export function LinksCities(props) {
     });
 
   //Регион в списке
-  let [SelectRegionID, setSelectRegionID] = React.useState(regionIDCoockie);
+  const [SelectRegionID, setSelectRegionID] = React.useState(regionIDCoockie);
   //Город в списке
-  let [SelectCity, setSelectCity] = React.useState(cityCookie);
+  const [SelectCity, setSelectCity] = React.useState(cityCookie);
   //Активный город
-  let [ActiveIDCity, setActiveIDCity] = React.useState(ActiveIDCityNow);
+  const [ActiveIDCity, setActiveIDCity] = React.useState(ActiveIDCityNow);
   //Активный город
-  let [ActiveNameCity, setActiveNameCity] = React.useState(ActiveNameCityNow);
+  const [ActiveNameCity, setActiveNameCity] = React.useState(ActiveNameCityNow);
 
   function ClickRegion(r) {
     setSelectRegionID(r);
