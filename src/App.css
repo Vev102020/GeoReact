@@ -66,7 +66,7 @@ select {
   padding: 0 2.25rem;
   line-height: 45px;
   color: #ffffff;
-  background: #9d00ff;
+  background: #00a1ff;
   font-size: 1rem;
   font-weight: 400;
   font-family: "Jost", sans-serif;
@@ -99,12 +99,12 @@ select {
 
 /*** Скрол всего сайта ***/
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 5px;
   height: 0;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 0;
-  background-color: #9d00ff;
+  background-color: #00a1ff;
 }
 ::-webkit-scrollbar-track {
   border-radius: 0;
@@ -136,7 +136,7 @@ header {
   -moz-box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
   border-radius: 5px;
-  background: #9d00ff;
+  background: #00a1ff;
   padding: 20px 0;
   color: #ffffff;
   position: absolute;
@@ -166,11 +166,8 @@ header .locator {
 .SearchBlockContainer {
   z-index: 20;
   display: none;
-  padding: 20px 40px 20px 20px;
   background: #ffffff;
-  border: 1px solid #dddddd;
   border-radius: 5px;
-  border-bottom: 1px solid #dddddd;
   padding-bottom: 20px;
   position: absolute;
   top: 50%;
@@ -184,18 +181,21 @@ header .locator {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  padding: 20px;
 }
 .SearchBlockUP .saveCity {
-  padding: 0 20px;
   margin-left: 20px;
 }
 #SearchCityBlock {
   display: flex;
+  padding: 0 20px;
 }
 #SearchCityBlock .searchTitle {
   font-size: 20px;
-  font-weight: 600;
   cursor: default;
+  color: #afaaaa;
+  padding: 10px;
+  border-radius: 5px;
   margin-bottom: 10px;
   display: block;
 }
@@ -204,16 +204,17 @@ header .locator {
 }
 #SearchCityBlock #region ul,
 #SearchCityBlock #city ul {
-  padding-left: 20px;
   height: 340px;
   overflow-y: overlay;
 }
+#city ul li.active,
+#region ul li.active {
+  color: #ffffff !important;
+  background: #00a1ff;
+}
 #SearchCityBlock #region ul li:hover,
-#region ul li.active,
-#SearchCityBlock #city ul li:hover,
-#city ul li.active {
-  color: #9d00ff;
-  list-style-type: disclosure-closed !important;
+#SearchCityBlock #city ul li:hover {
+  color: #00a1ff;
 }
 #SearchCityBlock #region ul li,
 #SearchCityBlock #city ul li {
@@ -223,17 +224,19 @@ header .locator {
   line-height: 30px;
   font-size: 18px;
   list-style-type: none;
+  padding: 0 10px;
 }
 .NameCityBlock,
-#SearchCityBlock .searchTitle,
 .SearchBlockContainer .SearchBlockUP {
-  margin-left: 20px;
+  padding: 0 20px;
 }
 .NameCityBlock {
-  margin-bottom: 20px;
   font-size: 20px;
   cursor: default;
-  font-weight: 600;
+  padding: 20px;
+  background: #00a1ff;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 #geoAreas .geo_block {
   cursor: pointer;
@@ -257,7 +260,7 @@ header .locator {
 #geoAreas .geo_block:hover .nameCity {
   color: #e5e4e6;
 }
-
+/* 
 .cookie {
   color: #000000;
   position: absolute;
@@ -265,7 +268,7 @@ header .locator {
   top: 40%;
   transform: translate(-50%, -40%);
   text-align: center;
-}
+} */
 .css-2b097c-container {
   width: 100%;
 }
@@ -286,6 +289,7 @@ header .locator {
   right: 0;
   top: 0;
   cursor: pointer;
+  fill: #ffffff;
 }
 .close:hover {
   fill: #7f7f7f;
@@ -299,12 +303,11 @@ header .locator {
 }
 
 @media all and (max-width: 480px) {
-  .cookie {
+  /* .cookie {
     top: 30%;
     transform: translate(-50%, -30%);
-  }
+  } */
   .SearchBlockContainer {
-    padding: 20px;
     width: 80%;
   }
   header {
@@ -318,6 +321,7 @@ header .locator {
     display: none;
   }
   .NameCityBlock {
+    font-size: 18px;
     margin-left: 0;
   }
   #SearchCityBlock #region ul li,

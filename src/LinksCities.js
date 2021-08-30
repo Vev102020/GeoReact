@@ -109,7 +109,7 @@ export function LinksCities(props) {
             colors: {
               ...theme.colors,
               primary25: "#dddddd",
-              primary: "#9d00ff",
+              primary: "#00a1ff",
             },
           })}
           options={ArrayCity}

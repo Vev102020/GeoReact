@@ -43,10 +43,10 @@ function App() {
           setLinksOpen(!LinksOpen);
         }}
       ></div>
-      <span className="cookie">
+      {/* <span className="cookie">
         Город в cookie: <br />
         {cookies.get("YmapCity")}
-      </span>
+      </span> */}
       <header>
         <div className="container header">
           {/* Гео. Определение города */}
