@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import React from "react";
 import { YmapNameCity } from "./Api-maps.yandex.js";
 import { locator } from "./icon/locator.js";
@@ -7,13 +7,11 @@ import { LinksCities } from "./LinksCities.js";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
-
 function App() {
   let [LinksOpen, setLinksOpen] = React.useState("false");
 
   const YmapCity = { YmapNameCity }.YmapNameCity;
   const AddCookie = () => {
-    cookies.set("YmapCity", YmapCity, { path: "/" });
     setLinksOpen(!LinksOpen);
   };
 
@@ -33,25 +31,29 @@ function App() {
   }
 
   function RemoveCookie() {
-    cookies.remove("YmapCity",  {path: '/'});
+    cookies.remove("YmapCity", { path: "/" });
     window.location.reload();
   }
 
-  
   return (
     <div className="App">
-      <div className={cn("overlay", { active: !LinksOpen })} onClick={()=>{setLinksOpen(!LinksOpen)}}></div>
-      <span className="cookie">Город в cookie: <br/>{cookies.get("YmapCity")}</span>
+      <div
+        className={cn("overlay", { active: !LinksOpen })}
+        onClick={() => {
+          setLinksOpen(!LinksOpen);
+        }}
+      ></div>
+      <span className="cookie">
+        Город в cookie: <br />
+        {cookies.get("YmapCity")}
+      </span>
       <header>
         <div className="container header">
           {/* Гео. Определение города */}
           <div id="geoAreas">
             <div className="geo_block" onClick={AddCookie}>
               <span className="locator">{locator}</span>
-              <span
-                id="YmapNameCity"
-                className="YmapNameCity"
-              >
+              <span id="YmapNameCity" className="YmapNameCity">
                 {cookies.get("YmapCity")}
               </span>
             </div>

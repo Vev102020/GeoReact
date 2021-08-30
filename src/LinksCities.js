@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import React from "react";
 import cn from "classnames";
 import Cookies from "universal-cookie";
@@ -38,11 +38,11 @@ export function LinksCities(props) {
           return ArrayCity.push({
             label: n.name,
             value: n.id,
-            parent_id: n.parent_id
+            parent_id: n.parent_id,
           });
         });
     });
-    console.log(cookieCityName);
+
   //Регион в списке
   let [SelectRegionID, setSelectRegionID] = React.useState(regionIDCoockie);
   //Город в списке
@@ -63,8 +63,7 @@ export function LinksCities(props) {
   }
 
   let handleChange = (newValue) => {
-    if (newValue === null || newValue.__isNew__ ===  true ) {
-        
+    if (newValue === null || newValue.__isNew__ === true) {
       setSelectCity(cityCookie);
       setSelectRegionID(regionIDCoockie);
       setActiveIDCity(ActiveIDCityNow);
@@ -73,7 +72,7 @@ export function LinksCities(props) {
       setSelectCity({
         label: newValue.label,
         value: newValue.value,
-        parent_id: newValue.parent_id
+        parent_id: newValue.parent_id,
       });
       setSelectRegionID(newValue.parent_id);
       setActiveIDCity(newValue.value);
@@ -81,31 +80,36 @@ export function LinksCities(props) {
     }
   };
 
-
-  
   return (
     <div
       className={cn("SearchBlockContainer", {
-        active: !props.LinksOpen
+        active: !props.LinksOpen,
       })}
     >
-        <span className="close" onClick={()=>{props.setLinksOpen("false")}}>{close}</span>
+      <span
+        className="close"
+        onClick={() => {
+          props.setLinksOpen("false");
+        }}
+      >
+        {close}
+      </span>
       <div className="NameCityBlock">
         <span>Выберите город</span>
       </div>
       <div className="SearchBlockUP">
         <CreatableSelect
-        className="Select"
-        formatCreateLabel={() => "Результат не найден" }
+          className="Select"
+          formatCreateLabel={() => "Результат не найден"}
           isClearable
           onChange={handleChange}
-        theme={theme => ({
+          theme={(theme) => ({
             ...theme,
             borderRadius: 5,
             colors: {
               ...theme.colors,
-              primary25: '#dddddd',
-              primary: '#9d00ff',
+              primary25: "#dddddd",
+              primary: "#9d00ff",
             },
           })}
           options={ArrayCity}
@@ -133,7 +137,7 @@ export function LinksCities(props) {
                   <li
                     key={i}
                     className={cn("link_region", {
-                      active: link.id === SelectRegionID
+                      active: link.id === SelectRegionID,
                     })}
                     value={link.id}
                     onClick={() => {
@@ -156,7 +160,7 @@ export function LinksCities(props) {
                     return (
                       <li
                         className={cn("link_city", {
-                          active: n.id === ActiveIDCity
+                          active: n.id === ActiveIDCity,
                         })}
                         key={i}
                         value={n.id}
