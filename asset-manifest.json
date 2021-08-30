@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GeoReact/static/css/main.731d1969.chunk.css",
-    "main.js": "/GeoReact/static/js/main.304f0490.chunk.js",
-    "main.js.map": "/GeoReact/static/js/main.304f0490.chunk.js.map",
+    "main.js": "/GeoReact/static/js/main.8cf3f49f.chunk.js",
+    "main.js.map": "/GeoReact/static/js/main.8cf3f49f.chunk.js.map",
     "runtime-main.js": "/GeoReact/static/js/runtime-main.f826a796.js",
     "runtime-main.js.map": "/GeoReact/static/js/runtime-main.f826a796.js.map",
     "static/js/2.8dcc4e61.chunk.js": "/GeoReact/static/js/2.8dcc4e61.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f826a796.js",
     "static/js/2.8dcc4e61.chunk.js",
     "static/css/main.731d1969.chunk.css",
-    "static/js/main.304f0490.chunk.js"
+    "static/js/main.8cf3f49f.chunk.js"
   ]
 }
